@@ -93,7 +93,7 @@ namespace MonsterFightSimulator
                     _fighter2.Attack(_fighter1);
                     i++;
                     Console.WriteLine("After the {0} round the {1}'s opponent has {2} hp left.", i, _fighter1.race, _fighter2.hp);
-                    Console.WriteLine("Meanwhile the {0} has {1} hp left.", _fighter1, _fighter1.hp);
+                    Console.WriteLine("Meanwhile the {0} has {1} hp left.", _fighter1.race, _fighter1.hp);
                 }
                 while (_fighter1.hp > 0 && _fighter2.hp > 0);
                 Winner(_fighter1, _fighter2, i);
