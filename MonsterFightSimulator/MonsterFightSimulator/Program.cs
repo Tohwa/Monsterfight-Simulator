@@ -8,15 +8,18 @@
             string m_firstMonster = "";
             string m_secondMonster = "";
 
+            // create 3 object corresponding to the different monsters available
             Monster Orc = new Orc();
             Monster Troll = new Troll();
             Monster Goblin = new Goblin();
 
+            // create 2 choice objects where the user can make his monster choice and give it stats
             MonsterChoice CMonster1 = new MonsterChoice(Orc, Troll, Goblin);
             MonsterChoice CMonster2 = new MonsterChoice(Orc, Troll, Goblin);
-
+           
             Compare Compare = new Compare();
 
+            // create a object where the monsters are given values are given to
             Combat Combat = new Combat(Orc, Troll, Goblin);
 
             m_firstMonster = CMonster1.race1();

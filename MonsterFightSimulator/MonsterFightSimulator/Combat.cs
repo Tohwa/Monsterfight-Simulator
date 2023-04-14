@@ -8,10 +8,17 @@ namespace MonsterFightSimulator
 {
     internal class Combat
     {
+
         private readonly Monster Orc;
         private readonly Monster Troll;
         private readonly Monster Goblin;
 
+        /// <summary>
+        /// constructor to save the given parameters
+        /// </summary>
+        /// <param name="orc"> praviously chosen orc stats given to the combat class </param>
+        /// <param name="troll"> praviously chosen troll stats given to the combat class </param>
+        /// <param name="goblin"> praviously chosen goblin stats given to the combat class </param>
         public Combat(Monster orc, Monster troll, Monster goblin)
         {
             Orc = orc;
@@ -21,6 +28,11 @@ namespace MonsterFightSimulator
 
         Compare Compare = new Compare();
 
+        /// <summary>
+        /// simple switch case to determine which 2 given races are fighting
+        /// </summary>
+        /// <param name="_choice1"> first chosen race </param>
+        /// <param name="_choice2"> second chosen race </param>
         public void Fight(string _choice1, string _choice2)
         {
             switch (_choice1)
@@ -67,8 +79,8 @@ namespace MonsterFightSimulator
         /// <summary>
         /// Simple Combatloop until one Monster is dead.
         /// </summary>
-        /// <param name="_fighter1"> Input of the first monster </param>
-        /// <param name="_fighter2"> Input of the second Monster </param>
+        /// <param name="_fighter1"> Input of the first monster and its stats </param>
+        /// <param name="_fighter2"> Input of the second Monster and its stats </param>
         private void FightStart(Monster _fighter1, Monster _fighter2)
         {
             int i = 0;          // counts the number of rounds taken for combat to finish
@@ -103,8 +115,8 @@ namespace MonsterFightSimulator
         /// <summary>
         ///  Depending on which Monster one a simple statement who has lost will be posted.
         /// </summary>
-        /// <param name="_fighter1"> Input of the first monster </param>
-        /// <param name="_fighter2"> Input of the second monster </param>
+        /// <param name="_fighter1"> Input of the first monster and its stats </param>
+        /// <param name="_fighter2"> Input of the second monster and its stats </param>
         /// <param name="i"> counter for the number of rounds </param>
         public void Winner(Monster _fighter1, Monster _fighter2, int i)
         {

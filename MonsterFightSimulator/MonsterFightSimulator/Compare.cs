@@ -9,7 +9,7 @@ namespace MonsterFightSimulator
     internal class Compare
     {
         /// <summary>
-        /// Simple Method to compare 2 values if they are equal the method returns True otherwise false
+        /// Simple Method to compare 2 strings if they are equal if yes the method returns true otherwise false
         /// </summary>
         /// <param name="_monster1"> Race of the first chosen Monster </param>
         /// <param name="_monster2"> Race of the second chosen Monster </param>
